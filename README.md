@@ -4,7 +4,7 @@
 
 The DeepRacer Model Optimizer ROS package creates the *model_optimizer_node* which is part of the core AWS DeepRacer application and will be launched from the deepracer_launcher. More details about the application and the components can be found [here](https://github.com/aws-racer/aws-deepracer-launcher).
 
-This node is responsible for running the *Intel OpenVino* model optimizer script for the DeepRacer reinforcement learning models to obtain the intermediate representation xml files and other optimizer artifacts required to run the inference with the model.
+This node is responsible for running the Intel OpenVino Model Optimizer script for the DeepRacer reinforcement learning models to obtain the intermediate representation xml files and other optimizer artifacts required to run inference with the model.
 
 More details about the Intel OpenVino Model Optimizer can be found here:
 https://docs.openvinotoolkit.org/2021.1/openvino_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html
@@ -17,8 +17,7 @@ The source code is released under Apache 2.0 (https://aws.amazon.com/apache-2-0/
 
 ### Prerequisites
 
-The DeepRacer device comes with all the pre-requisite packages, build systems and 
-libraries installed to build and run the model_optimizer_pkg. More details about pre installed set of packages and libraries on the DeepRacer, and installing required build systems can be found in the [Getting Started](https://github.com/aws-racer/aws-deepracer-launcher/blob/main/getting-started.md) section of the AWS DeepRacer Opensource page.
+The DeepRacer device comes with all the pre-requisite packages and libraries installed to run the model_optimizer_pkg. More details about pre installed set of packages and libraries on the DeepRacer, and installing required build systems can be found in the [Getting Started](https://github.com/aws-racer/aws-deepracer-launcher/blob/main/getting-started.md) section of the AWS DeepRacer Opensource page.
 
 The model_optimizer_pkg specifically depends on the following ROS2 packages as build 
 and execute dependencies:
@@ -65,23 +64,23 @@ To launch the built model_optimizer_node as root user on the DeepRacer device op
 
 1. Navigate to the deepracer workspace:
 
-    cd ~/deepracer_ws
+        cd ~/deepracer_ws
 
 1. Source the ROS2 Foxy setup bash script:
 
-    source /opt/ros/foxy/setup.bash 
+        source /opt/ros/foxy/setup.bash 
 
 1. Set the environment variables required to run Intel OpenVino scripts:
 
-    source /opt/intel/openvino_2021/bin/setupvars.sh
+        source /opt/intel/openvino_2021/bin/setupvars.sh
 
 1. Source the setup script for the installed packages:
 
-    source ~/deepracer_ws/install/setup.bash  
+        source ~/deepracer_ws/install/setup.bash  
 
 1. Launch the model_optimizer_pkg using the launch script:
 
-    ros2 launch model_optimizer_pkg model_optimizer_pkg_launch.py
+        ros2 launch model_optimizer_pkg model_optimizer_pkg_launch.py
 
 ## Launch Files
 
