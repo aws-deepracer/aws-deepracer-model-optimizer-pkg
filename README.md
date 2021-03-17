@@ -105,4 +105,9 @@ The  model_optimizer_pkg_launch.py is also included in this package that gives a
 | ---------- | ------------ | ----------- |
 |model_optimizer_server|ModelOptimizeSrv|Service that is called to launch the Intel OpenVino model optimizer script for the specific model with appropriate model and platform specific parameters set.|
 
+## Resources
+
+* AWS DeepRacer Opensource getting started: [https://github.com/awsdeepracer/aws-deepracer-launcher/blob/main/getting-started.md](https://github.com/awsdeepracer/aws-deepracer-launcher/blob/main/getting-started.md)
+
+
 
