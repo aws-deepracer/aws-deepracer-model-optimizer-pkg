@@ -2,7 +2,7 @@
 
 ## Overview
 
-The DeepRacer Model Optimizer ROS package creates the *model_optimizer_node* which is part of the core AWS DeepRacer application and will be launched from the deepracer_launcher. More details about the application and the components can be found [here](https://github.com/awsdeepracer/aws-deepracer-launcher).
+The DeepRacer Model Optimizer ROS package creates the *model_optimizer_node* which is part of the core AWS DeepRacer application and will be launched from the deepracer_launcher. More details about the application and the components can be found [here](https://github.com/aws-deepracer/aws-deepracer-launcher).
 
 This node is responsible for running the Intel OpenVino Model Optimizer script for the DeepRacer reinforcement learning models to obtain the intermediate representation xml files and other optimizer artifacts required to run inference with the model.
 
@@ -17,7 +17,7 @@ The source code is released under Apache 2.0 (https://aws.amazon.com/apache-2-0/
 
 ### Prerequisites
 
-The DeepRacer device comes with all the pre-requisite packages and libraries installed to run the model_optimizer_pkg. More details about pre installed set of packages and libraries on the DeepRacer, and installing required build systems can be found in the [Getting Started](https://github.com/awsdeepracer/aws-deepracer-launcher/blob/main/getting-started.md) section of the AWS DeepRacer Opensource page.
+The DeepRacer device comes with all the pre-requisite packages and libraries installed to run the model_optimizer_pkg. More details about pre installed set of packages and libraries on the DeepRacer, and installing required build systems can be found in the [Getting Started](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md) section of the AWS DeepRacer Opensource page.
 
 The model_optimizer_pkg specifically depends on the following ROS2 packages as build 
 and execute dependencies:
@@ -43,7 +43,7 @@ Open up a terminal on the DeepRacer device and run the following commands as roo
 
 1. Clone the model_optimizer_pkg on the DeepRacer device:
 
-        git clone https://github.com/awsdeepracer/aws-deepracer-model-optimizer-pkg.git
+        git clone https://github.com/aws-deepracer/aws-deepracer-model-optimizer-pkg.git
 
 1. Fetch unreleased dependencies:
 
@@ -115,7 +115,7 @@ The  model_optimizer_pkg_launch.py is also included in this package that gives a
 
 ## Resources
 
-* AWS DeepRacer Opensource getting started: [https://github.com/awsdeepracer/aws-deepracer-launcher/blob/main/getting-started.md](https://github.com/awsdeepracer/aws-deepracer-launcher/blob/main/getting-started.md)
+* AWS DeepRacer Opensource getting started: [https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md](https://github.com/aws-deepracer/aws-deepracer-launcher/blob/main/getting-started.md)
 
 
 
