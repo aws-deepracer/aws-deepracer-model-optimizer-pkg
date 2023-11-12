@@ -240,6 +240,15 @@ class ModelOptimizerNode(Node):
         """
         if not os.path.isfile(common_params[constants.MOKeys.MODEL_PATH]):
             raise Exception(f"Model file {common_params[constants.MOKeys.MODEL_PATH]} not found")
+        
+        # Check if model exists
+        if os.path.isfile(os.path.join(common_params[constants.MOKeys.OUT_DIR],
+                                   f"{common_params[constants.MOKeys.MODEL_NAME]}.bin")):
+            self.get_logger().info(f"Cached model: {common_params[constants.MOKeys.MODEL_NAME]}.xml")
+            return 0, os.path.join(common_params[constants.MOKeys.OUT_DIR],
+                                   f"{common_params[constants.MOKeys.MODEL_NAME]}.xml")
+            
+
         cmd = f"{constants.PYTHON_BIN} {constants.INTEL_PATH}{mo_path}"
         # Construct the cli command
         for flag, value in dict(common_params, **platform_parms).items():
