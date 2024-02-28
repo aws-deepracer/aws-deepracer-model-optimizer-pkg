@@ -22,16 +22,6 @@ from enum import Enum
 
 MODEL_OPTIMIZER_SERVER_SERVICE_NAME = "model_optimizer_server"
 
-# Static variables
-# Path where the Intel OpenVino is installed.
-INTEL_PATH = os.environ["INTEL_CVSDK_DIR"] + "/deployment_tools/model_optimizer/"
-
-PYTHON_BIN = "python3"
-
-# Max retry count
-MAX_OPTIMIZER_RETRY_COUNT = 1
-
-
 class SensorInputTypes(Enum):
     """Enum listing the sensors input types supported; as we add sensors we should add
        inputs. This is also important for networks with more than one input.
@@ -98,8 +88,8 @@ class MultiHeadInputKeys(object):
     INPUT_CHANNELS = "--input-channels"
 
 
-class MOKeys(object):
-    """Class that statically stores Intel"s model optimizer cli flags. Order doesnot matter.
+class ParamKeys(object):
+    """Class that statically stores converter flags. Order doesnot matter.
     """
     MODEL_PATH = "--input_model"
     MODEL_NAME = "--model_name"
