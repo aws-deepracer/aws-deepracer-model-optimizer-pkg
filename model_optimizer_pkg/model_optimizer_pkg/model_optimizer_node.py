@@ -273,10 +273,12 @@ class ModelOptimizerNode(Node):
                                 f"{common_params[constants.ParamKeys.MODEL_NAME]}.tflite"), 'wb') as f:
                 f.write(tflite_model)
 
-            self.get_logger().info(f"Created TFLite model: {common_params[constants.ParamKeys.MODEL_NAME]}.tflite")
+            output_file = os.path.join(common_params[constants.ParamKeys.OUT_DIR],
+                                   f"{common_params[constants.ParamKeys.MODEL_NAME]}.tflite")
 
-            return 0, os.path.jo in (common_params[constants.ParamKeys.OUT_DIR],
-                                    f"{common_params[constants.ParamKeys.MODEL_NAME]}.tflite")
+            self.get_logger().info(f"Created TFLite model: {output_file}")
+
+            return 0, output_file
 
         except: #noqa  
             # Return error code 1, which means that the model optimizer failed even after retries.
