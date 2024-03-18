@@ -5,7 +5,7 @@
   <version>0.0.1</version>
   <description>
     This package contains model optimizer node that is responsible for
-    running the Intel OpenVino model optimizer script for the DeepRacer
+    running the TFLite Model Conversion script for the DeepRacer
     reinforcement learning models.
   </description>
   <maintainer email="aws-deepracer@amazon.com">AWS DeepRacer</maintainer>

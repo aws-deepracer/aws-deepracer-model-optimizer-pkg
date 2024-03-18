@@ -4,9 +4,7 @@
 
 The AWS DeepRacer Model Optimizer ROS package creates the `model_optimizer_node`, which is part of the core AWS DeepRacer application and launches from the `deepracer_launcher`. For more information about the application and the components, see the [aws-deepracer-launcher repository](https://github.com/aws-deepracer/aws-deepracer-launcher).
 
-This node is responsible for running the Intel OpenVino Model Optimizer script for the AWS DeepRacer reinforcement learning models to obtain the intermediate representation XML files and other optimizer artifacts required to run inference with the model.
-
-For more information about the Intel OpenVino Model Optimizer, see the [Model Optimizer Developer Guide](https://docs.openvinotoolkit.org/2021.1/openvino_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html).
+This node is responsible for running the TFLite Model Converter for the AWS DeepRacer reinforcement learning models to obtain the intermediate representation XML files and other optimizer artifacts required to run inference with the model.
 
 ## License
 
@@ -61,7 +59,7 @@ Open up a terminal on the AWS DeepRacer device and run the following commands as
 
 ## Usage
 
-The `model_optimizer_node` provides a very specific and core functionality to optimize the reinforcement learning models that are trained on the AWS DeepRacer simulator. Intel OpenVino provides APIs and scripts to create a intermediate representation that can be used for faster model inference. Although the node is built to work with the AWS DeepRacer application, it can be run independently for development, testing, and debugging purposes.
+The `model_optimizer_node` provides a very specific and core functionality to optimize the reinforcement learning models that are trained on the AWS DeepRacer simulator. TFLite provides APIs to create a intermediate representation that can be used for faster model inference. Although the node is built to work with the AWS DeepRacer application, it can be run independently for development, testing, and debugging purposes.
 
 ### Run the node
 
@@ -74,10 +72,6 @@ To launch the built `model_optimizer_node` as the root user on the AWS DeepRacer
 1. Source the ROS 2 Foxy setup bash script:
 
         source /opt/ros/foxy/setup.bash 
-
-1. Set the environment variables required to run Intel OpenVino scripts:
-
-        source /opt/intel/openvino_2021/bin/setupvars.sh
 
 1. Source the setup script for the installed packages:
 
@@ -112,7 +106,7 @@ The `model_optimizer_pkg_launch.py`, included in this package, provides an examp
 
 | Service name | Service type | Description |
 | ---------- | ------------ | ----------- |
-|`model_optimizer_server`|`ModelOptimizeSrv`|Service that is called to launch the Intel OpenVino model optimizer script for the specific model with appropriate model and platform specific parameters set.|
+|`model_optimizer_server`|`ModelOptimizeSrv`|Service that is called to launch the TFLite Model Converter for the specific model with appropriate model and platform specific parameters set.|
 
 ## Resources
 

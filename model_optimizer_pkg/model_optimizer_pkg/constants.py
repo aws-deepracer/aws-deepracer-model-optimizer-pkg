@@ -98,8 +98,8 @@ class MultiHeadInputKeys(object):
     INPUT_CHANNELS = "--input-channels"
 
 
-class MOKeys(object):
-    """Class that statically stores Intel"s model optimizer cli flags. Order doesnot matter.
+class ParamKeys(object):
+    """Class that statically stores converter flags. Order doesnot matter.
     """
     MODEL_PATH = "--input_model"
     MODEL_NAME = "--model_name"
